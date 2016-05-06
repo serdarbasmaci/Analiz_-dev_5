@@ -1,0 +1,29 @@
+  int Fibonacci2(int n)
+        {
+
+            int fibDizi[1000];
+            if (n < 2)
+            {
+                return n;
+            }
+            else if (fibDizi[n] != 0)
+            {
+                return fibDizi[n];
+            }
+            else
+            {
+                fibDizi[n] = Fibonacci2(n - 1) + Fibonacci2(n - 2);
+                
+                return fibDizi[n];
+            }
+        }
+
+
+        int main(int argc, char *argv[])
+        {
+            int sayi = 0;
+           printf("Hesaplanacak Fibonacci Sayýsýný Giriniz: ");
+            scanf("%d",&sayi);
+            printf(Fibonacci2(sayi));
+            
+        }
